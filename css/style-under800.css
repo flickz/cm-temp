@@ -1,0 +1,62 @@
+/** Media Query 1*/
+@media only screen and (max-width: 768px){
+	#pc{
+		display: none;
+	}
+	.smallScreen-signupTop-button{
+		margin:-75px -50% 0 0;
+	}
+	.site-desc{
+		margin:-5px 0 0 0; 
+	}
+	.site-desc-title{
+		font-size: 20px;
+		font-weight: 500;
+	}
+	.site-desc-subtitle{
+		font-size: 14px;
+	}
+	.form-container{
+		max-width: 95%;
+		margin:30px 0 25px 10px;
+	}
+	.input-text{
+		margin-right: -20px;
+	}
+	.smallScreen-login-button, .smallScreen-signupBottom-button{
+		margin:5px 5px 10px 45%;
+	}
+	/**complete reg*/
+	.form-title{
+		font-weight: 400;
+		font-size:22px;
+	}
+	.nav{
+		box-sizing: border-box;
+		margin-top: 30px;
+		margin-left: 1px;
+		position: block;
+		background-color: #fff;
+		top: 20px;
+	}
+	.nav-ul{
+		margin-left: -35px;
+	}
+	.nav-li{
+		list-style: none;
+		display: block;
+		padding: 5px;
+	}
+	.nav-li:hover{
+		background-color: #fafafa;
+	}
+	.nav-a{
+		display: block;
+		font-size: 16px;
+		font-weight: 300;
+	}
+	.nav-a:hover{
+		color:#94949a;
+	}
+			
+}
