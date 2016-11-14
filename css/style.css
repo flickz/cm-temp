@@ -213,7 +213,7 @@ a:hover{
 	font-size: 15px;
 }
 .text-title{
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 22px;
 	line-height: -5px;
 	word-spacing: -1px;
@@ -287,7 +287,7 @@ a:hover{
 }
 .dropdown-ul{
 	position: absolute;
-	margin-top: 10px;
+	margin-top: 15px;
 	left: -100px;
 	box-shadow: 0 1px 4px rgba(0,0,0,.04);
     border: 1px solid rgba(0,0,0,.09);
@@ -296,6 +296,21 @@ a:hover{
 	padding: 10px;
 	font-size: 16px;
 	font-weight: 300;
+}
+
+.dropdown-ul:after {
+    content: ' ';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+ 	top: -15px;
+ 	left: 73%;
+ 	background:#fff;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	transform: rotate(45deg) translate(6px,6px);
+    box-shadow: -1px -1px 1px -1px rgba(0,0,0,.44);
 }
 
 
