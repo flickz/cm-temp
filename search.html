@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CM Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400,500" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"rel="stylesheet" type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		body{
+			background: #fff !important;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip();
+
+				$("#search").click(function(){
+					$("#top-search-input-group").toggleClass("hide-search");
+				});
+
+				$("#top-search-input-text").blur(function(){
+					$("#top-search-input-group").toggleClass("hide-search");
+				});
+		});
+	</script>
+</head>
+<body>
+
+		<header class="container-fluid header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6">
+						<h1 class="logo text-thin">Logo</h1>
+					</div>
+					<div class="col-xs-6">
+						<div class="top-menu text-right">
+							<span class="hidden-sm hidden-xs hidden-md hidden-lg">
+								<button class="btn btn-default top-upload-btn" data-toggle="modal" data-target="#myModal">
+									<i class="fa fa-upload"></i> Upload Material
+								</button>
+							</span>
+
+							<span  class="search-icon visible-sm-inline visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
+								<a href=""><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
+							</span>
+
+							<span id="search" class="search-icon hidden-sm hidden-xs" data-toggle="tooltip" title="Search" data-placement="bottom">
+								<i class="fa fa-search text-thin" aria-hidden="true"></i>
+							</span>
+
+							<span id="top-search-input-group" class="input-text-group top-search-input-group hide-search">
+								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search for Materials">
+							</span>
+
+							<span class="note-icon dropdown"> 
+							  	<a class="note-icon dropdown-toggle" data-toggle="dropdown" >
+									<i class="fa fa-bell-o text-thin" data-toggle="tooltip" data-placement="bottom" title="Notification"  aria-hidden="true"></i> <span class="badge note-badge">5</span>
+							  	</a>
+								<ul id="note-dropdown" class="dropdown-menu dropdown-ul note-dropdown">
+								    <li class="note-list-head">
+								    	<span class="note-header small text-left"><strong>Notification</strong></span>
+								    	<span class="note-header small pull-right"><a href=""><strong>See All</strong></a></span>
+								    </li>
+								    <li role="separator" class="divider note-head-seperator"></li>	    
+								    <li class="note-preview">
+							    		<a class="note-link text-thin" href="#">
+								    		<div>
+								    			<span class="pull-left">
+								    				<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+								    			</span>
+								    			<p class="small note-text-p">
+								    				<strong>Oyerinde Tayo</strong> uploaded new BDG201 Assignment
+								    			</p>
+								    			<p class="small text-muted note-text-p"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+								    		</div>
+							    		</a>
+								    </li>
+								    <li class="note-preview">
+							    		<a class="note-link text-thin" href="#">
+								    		<div>
+								    			<span class="pull-left">
+								    				<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+								    			</span>
+								    			<p class="small note-text-p">
+								    				<strong>Oyerinde Tayo</strong> uploaded new BDG201 Assignment
+								    			</p>
+								    			<p class="small text-muted note-text-p"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+								    		</div>
+							    		</a>
+								    </li>
+								     <li class="note-preview">
+							    		<a class="note-link text-thin" href="#">
+								    		<div>
+								    			<span class="pull-left">
+								    				<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+								    			</span>
+								    			<p class="small note-text-p">
+								    				<strong>Oyerinde Tayo</strong> uploaded new BDG201 Assignment
+								    			</p>
+								    			<p class="small text-muted note-text-p"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+								    		</div>
+							    		</a>
+								    </li>
+								</ul>
+							</span>
+							<span class="avatar dropdown"> 
+							  	<a class="dropdown-toggle" data-toggle="dropdown" href="">
+							  		<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+							  	</a>
+								<ul class="dropdown-menu dropdown-menu-left dropdown-ul">
+									<div class="poppver-arrow"></div>
+								    <li class="dropdown-li"><a  class="dropdown-a text-thin" href="#">Profile</a></li>
+								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Your courses</a></li>
+								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Settings</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Help</a></li>
+								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Sign Out</a></li>
+								</ul>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+	</header>
+	
+	<section class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="search-input-box">
+					<input type="text" name="" placeholder="Search Materials and Notes" class="search-input large-search-input small-search-input text-muted">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8">
+				<div class="search-types-box">
+					<span class="search-type">
+						<a href="" class="small text-muted search-type-link active-link">Handouts</a>
+					</span>
+					<span class="search-type">
+						<a href="" class="small text-muted search-type-link">Notes</a>
+					</span>
+					<span class="search-type">
+						<a href="" class="small text-muted search-type-link">Assignments</a>
+					</span>
+					<span class="search-type">
+						<a href="" class="small text-muted search-type-link">Course mates</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8">
+				<hr class="hor-line">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8">
+				
+				<div class="box-bottom-border">
+					<div class="author-info-date">
+						<span class="avatar">
+							<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="small">
+							<a href="" class="author-name ">Oluwaseun Omoyajowo</a> for <a href="" class="text-course-code">BDG203</a>
+						</span>
+						<span class="date-box">
+							<p class="date-uploaded text-thin text-muted">4 days ago</p>
+						</span>
+					</div>
+					<div class="text-box">
+						<h2><a href="" class="text-title">Introduction to Concreting Operation</a></h2>
+						<p class="text-thin text-para text-muted">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, iaculis sed nisi vitae, ornare consectetur ipsum. Aliquam dictum non metus in dapibus. Donec mattis massa eget libero congue, in posuere leo dictum. Donec vitae dapibus turpis. Phasellus semper sem a sem consectetur blandit eget eget turpis. Sed vulputate egestas nunc, in bibendum risus fringilla non. Proin tempor finibus euismod.
+							<br><br>
+							<a href="" class="small read-more  text-primary tex">Download</a>
+						</p>
+					</div>
+					<div class="feed-info">
+						<hr class="feed-hor-line">
+						<div class="feed-info-text">
+							<span class="note-text">
+								<a href="" class="small text-muted note-text text-left"><b>HANDOUT</b></a>
+							</span>
+							<span class="small text-muted readers-num text-right">
+								<i class="fa fa-download" aria-hidden="true"></i> 122
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="box-bottom-border">
+					<div class="author-info-date">
+						<span class="avatar">
+							<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="small">
+							<a href="" class="author-name ">Oluwaseun Omoyajowo</a> for <a href="" class="text-course-code">BDG203</a>
+						</span>
+						<span class="date-box">
+							<p class="date-uploaded text-thin text-muted">4 days ago</p>
+						</span>
+					</div>
+					<div class="text-box">
+						<h2><a href="" class="text-title">Introduction to Concreting Operation</a></h2>
+						<p class="text-thin text-para text-muted">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, iaculis sed nisi vitae, ornare consectetur ipsum. Aliquam dictum non metus in dapibus. Donec mattis massa eget libero congue, in posuere leo dictum. Donec vitae dapibus turpis. Phasellus semper sem a sem consectetur blandit eget eget turpis. Sed vulputate egestas nunc, in bibendum risus fringilla non. Proin tempor finibus euismod.
+							<br><br>
+							<a href="" class="small read-more  text-primary">Download</a>
+						</p>
+					</div>
+					<div class="feed-info">
+						<hr class="feed-hor-line">
+						<div class="feed-info-text">
+							<span class="note-text">
+								<a href="" class="small text-muted note-text "><b>HANDOUT</b></a>
+							</span>
+							<span class="small text-muted readers-num text-right">
+								<i class="fa fa-download" aria-hidden="true"></i> 122
+							</span>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

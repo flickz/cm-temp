@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CM Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400,500" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"rel="stylesheet" type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		body{
+			background: #fff !important;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip();
+
+				$("#search").click(function(){
+					$("#top-search-input-group").toggleClass("hide-search");
+				});
+
+				$("#top-search-input-text").blur(function(){
+					$("#top-search-input-group").toggleClass("hide-search");
+				});
+		});
+	</script>
+</head>
+<body>
+
+		<header class="container-fluid header bottom-shadow">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6">
+						<h1 class="logo text-thin">Logo</h1>
+					</div>
+					<div class="col-xs-6">
+						<div class="top-menu text-right">
+							<span class="hidden-sm hidden-xs hidden-md hidden-lg">
+								<button class="btn btn-default top-upload-btn" data-toggle="modal" data-target="#myModal">
+									<i class="fa fa-upload"></i> Upload Material
+								</button>
+							</span>
+
+							<span  class="search-icon visible-sm-inline visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
+								<a href=""><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
+							</span>
+
+							<span id="search" class="search-icon hidden-sm hidden-xs" data-toggle="tooltip" title="Search" data-placement="bottom">
+								<i class="fa fa-search text-thin" aria-hidden="true"></i>
+							</span>
+
+							<span id="top-search-input-group" class="input-text-group top-search-input-group hide-search">
+								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search for Materials">
+							</span>
+
+							<span class="note-icon dropdown"> 
+							  	<a class="note-icon dropdown-toggle" data-toggle="dropdown" >
+									<i class="fa fa-bell-o text-thin" data-toggle="tooltip" data-placement="bottom" title="Notification"  aria-hidden="true"></i> <span class="badge note-badge">5</span>
+							  	</a>
+								<ul id="note-dropdown" class="dropdown-menu dropdown-ul note-dropdown">
+								    <li class="note-list-head">
+								    	<span class="note-header small text-left"><strong>Notification</strong></span>
+								    	<span class="note-header small pull-right"><a href=""><strong>See All</strong></a></span>
+								    </li>
+								    <li role="separator" class="divider note-head-seperator"></li>	    
+								    <li class="note-preview">
+							    		<a class="note-link text-thin" href="#">
+								    		<div>
+								    			<span class="pull-left">
+								    				<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+								    			</span>
+								    			<p class="small note-text-p">
+								    				<strong>Oyerinde Tayo</strong> uploaded new BDG201 Assignment
+								    			</p>
+								    			<p class="small text-muted note-text-p"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+								    		</div>
+							    		</a>
+								    </li>
+								    <li class="note-preview">
+							    		<a class="note-link text-thin" href="#">
+								    		<div>
+								    			<span class="pull-left">
+								    				<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+								    			</span>
+								    			<p class="small note-text-p">
+								    				<strong>Oyerinde Tayo</strong> uploaded new BDG201 Assignment
+								    			</p>
+								    			<p class="small text-muted note-text-p"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+								    		</div>
+							    		</a>
+								    </li>
+								     <li class="note-preview">
+							    		<a class="note-link text-thin" href="#">
+								    		<div>
+								    			<span class="pull-left">
+								    				<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+								    			</span>
+								    			<p class="small note-text-p">
+								    				<strong>Oyerinde Tayo</strong> uploaded new BDG201 Assignment
+								    			</p>
+								    			<p class="small text-muted note-text-p"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+								    		</div>
+							    		</a>
+								    </li>
+								</ul>
+							</span>
+							<span class="avatar dropdown"> 
+							  	<a class="dropdown-toggle" data-toggle="dropdown" href="">
+							  		<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
+							  	</a>
+								<ul class="dropdown-menu dropdown-menu-left dropdown-ul">
+									<div class="poppver-arrow"></div>
+								    <li class="dropdown-li"><a  class="dropdown-a text-thin" href="#">Profile</a></li>
+								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Your courses</a></li>
+								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Settings</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Help</a></li>
+								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Sign Out</a></li>
+								</ul>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+	</header>
+
+	<section class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-10 col-md-8  col-sm-offset-1 col-md-offset-2">
+				<div class="user-box">
+					<h4 class="text-2-thin text-center">List of Registered Course Mate</h4>
+					<div class="user-info-box">
+						<hr class="hor-line">
+						<span class="avatar">
+							<img class="avatar-image-size-50x50 avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="user-name">
+							<a href="" class="small">Oluwaseun Omoyajowo</a>
+						</span>
+						<div class="user-details">
+							<div>
+								<a href="" class="text-xs text-muted">BDG/14/8521</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">SET</a> - <a href="" class="text-xs text-muted">Building</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">9 Mutal courses</a>
+							</div>
+						</div>
+						<hr class="hor-line">
+					</div>
+					<div class="user-info-box">
+						<hr class="hor-line">
+						<span class="avatar">
+							<img class="avatar-image-size-50x50 avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="user-name">
+							<a href="" class="small">Oluwaseun Omoyajowo</a>
+						</span>
+						<div class="user-details">
+							<div>
+								<a href="" class="text-xs text-muted">BDG/14/8521</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">SET</a> - <a href="" class="text-xs text-muted">Building</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">9 Mutal courses</a>
+							</div>
+						</div>
+						<hr class="hor-line">
+					</div>
+					<div class="user-info-box">
+						<hr class="hor-line">
+						<span class="avatar">
+							<img class="avatar-image-size-50x50 avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="user-name">
+							<a href="" class="small">Oluwaseun Omoyajowo</a>
+						</span>
+						<div class="user-details">
+							<div>
+								<a href="" class="text-xs text-muted">BDG/14/8521</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">SET</a> - <a href="" class="text-xs text-muted">Building</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">9 Mutal courses</a>
+							</div>
+						</div>
+						<hr class="hor-line">
+					</div>
+					<div class="user-info-box">
+						<hr class="hor-line">
+						<span class="avatar">
+							<img class="avatar-image-size-50x50 avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="user-name">
+							<a href="" class="small">Oluwaseun Omoyajowo</a>
+						</span>
+						<div class="user-details">
+							<div>
+								<a href="" class="text-xs text-muted">BDG/14/8521</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">SET</a> - <a href="" class="text-xs text-muted">Building</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">9 Mutal courses</a>
+							</div>
+						</div>
+						<hr class="hor-line">
+					</div>
+					<div class="user-info-box">
+						<hr class="hor-line">
+						<span class="avatar">
+							<img class="avatar-image-size-50x50 avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="user-name">
+							<a href="" class="small">Oluwaseun Omoyajowo</a>
+						</span>
+						<div class="user-details">
+							<div>
+								<a href="" class="text-xs text-muted">BDG/14/8521</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">SET</a> - <a href="" class="text-xs text-muted">Building</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">9 Mutal courses</a>
+							</div>
+						</div>
+						<hr class="hor-line">
+					</div>
+					<div class="user-info-box">
+						<hr class="hor-line">
+						<span class="avatar">
+							<img class="avatar-image-size-50x50 avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="user-name">
+							<a href="" class="small">Oluwaseun Omoyajowo</a>
+						</span>
+						<div class="user-details">
+							<div>
+								<a href="" class="text-xs text-muted">BDG/14/8521</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">SET</a> - <a href="" class="text-xs text-muted">Building</a>
+							</div>
+							<div>
+								<a href="" class="text-xs text-muted">9 Mutal courses</a>
+							</div>
+						</div>
+						<hr class="hor-line">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
+	
+
