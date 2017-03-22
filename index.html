@@ -14,16 +14,22 @@
 			display: none;
 		}
 	}
+	@media only screen and (min-width: 1200px){
+		.login-links-forget-psw{
+			margin-right: 63%;
+		}
+	}
+
 </style>
 <body>
 	<!--PC header-->
 	<header class="container-fluid header">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-4 col-md-8">
+				<div class="col-xs-12 col-sm-2 col-md-4 col-lg-6">
 					<h1 class="logo text-thin">Logo</h1>
 				</div>
-				<div id="login-form-con" class="col-sm-4 col-md-8 text-right">
+				<div  class="col-sm-10 col-md-8 col-lg-6 text-right top-login-form">
 					<form id="pc" class="">
 						<span class="input-text-group">
 							<input type="text" class="input-text text-thin" placeholder="Matric No">
@@ -40,66 +46,76 @@
 	</header>
 	<!--/pc-header-->
 
-	<section class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-6 col-md-8 text-center site-desc">
-				<h1 class="text-uppercase site-desc-title text-thin smallScreen-desc-title">Sharing Just Got Easy</h1>
-				<p class="site-subtitle text-thin">share class materials with your class mates anytime and anywhere</p>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4">
-				<!--Mobile Login-->
-				<div id="mobile" class="form-container">
-					<h3 class="form-title text-uppercase text-center">Login</h3>
-					<hr>
-					<form class="form">
-						<span class="input-text-group">
-							<input type="text" class="large-input-text input-text text-thin" placeholder="Matric No">
-						</span>
-						<span class="input-text-group">
-							<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
-						</span>
-						<p class="small text-center login-links">
-							<a href="" class="text-thin">Forgot Password?</a>
-						</p>
-						<p class="small text-center text-thin">
-							Don't have an account? <a href="" class="login-links text-thin">Create Account</a>
-						</p>
-						<br>
-						<button class="btn button text-thin smallScreen-login-button">Login</button>
-					</form>
+	<section id="section-container" class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<!--Site description-->
+				<div class="col-xs-12 col-sm-6 col-md-8 text-center site-desc">
+					<h1 class="text-uppercase site-desc-title text-thin smallScreen-desc-title text-large">Sharing Just Got Easy</h1>
+					<p class="site-subtitle">share lecture materials with your course mates anytime and anywhere</p>
 				</div>
-				<!--/Mobile Login-->
+				<!--/Site description-->
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<!--Mobile Login-->
+					<div id="mobile" class="form-container">
+						<h3 class="form-title text-uppercase text-center">Login</h3>
+						<hr>
+						<form class="form">
+							<span class="input-text-group">
+								<input type="text" class="large-input-text input-text text-thin" placeholder="Matric No">
+							</span>
+							<span class="input-text-group">
+								<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
+							</span>
+							<p class="small text-center login-links">
+								<a href="" class="text-thin">Forgot Password?</a>
+							</p>
+							<p class="small text-center text-thin">
+								Don't have an account? <a href="" class="login-links text-thin text-primary">Create Account</a>
+							</p>
+							<br>
+							<button class="btn button text-thin smallScreen-login-button">Login</button>
+						</form>
+					</div>
+					<!--/Mobile Login-->
 
 
-				<!--Sign up-->
-				<div id="pc" class="form-container largeScreen">
-					<h3 class="form-title text-uppercase text-center">Sign up</h3>
-					<hr>
-					<form class="form">
-						<span class="input-text-group">
-							<input type="text" class="large-input-text input-text text-thin" placeholder="Matric No">
-						</span>
-						<span class="input-text-group">
-							<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
-						</span>
-						<span class="input-text-group">
-							<input type="text" class="large-input-text input-text text-thin" placeholder="Name">
-						</span>
-						<span class="input-text-group">
-							<input type="text" class="large-input-text input-text text-thin" placeholder="Email">
-						</span>
-						<span class="input-text-group">
-							<input type="text" class="large-input-text input-text text-thin" placeholder="Phone no">
-						</span>
-						<select class="large-input-text input-text text-thin">
-							<option>Select School</option>
-							<option>FUTA</option>
-						</select>
-						<button class="btn btn-default button button-center text-thin smallScreen-signupBottom-button">Signup</button>
-					</form>
+					<!--Sign up-->
+					<div id="pc" class="form-container largeScreen">
+						<h3 class="form-title text-uppercase text-center">Sign up</h3>
+						<hr>
+						<form class="form">
+							<span class="input-text-group">
+								<input type="text" class="large-input-text input-text text-thin invalid-form-border" placeholder="Matric No">
+							</span>
+							<span class="">
+								<p class="error-mesg text-danger text-xs text-2-thin">Matric number already exist</p>
+							</span>
+							<span class="input-text-group">
+								<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
+							</span>
+							<span class="input-text-group">
+								<input type="text" class="large-input-text input-text text-thin" placeholder="Name">
+							</span>
+							<span class="input-text-group">
+								<input type="text" class="large-input-text input-text text-thin" placeholder="Email">
+							</span>
+							<span class="input-text-group">
+								<input type="text" class="large-input-text input-text text-thin" placeholder="Phone no">
+							</span>
+							<span class="input-text-group">
+								<select class="large-input-text input-text text-thin text-muted">
+								<option>Select School</option>
+								<option>FUTA</option>
+							</select>
+							</span>
+							<button class="btn button button-center text-thin smallScreen-signupBottom-button signup-button">Signup</button>
+						</form>
+					</div>
+					<!--/signup-->
+
 				</div>
-				<!--/signup-->
-
 			</div>
 		</div>
 	</section>

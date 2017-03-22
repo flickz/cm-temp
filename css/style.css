@@ -1,3 +1,6 @@
+*{
+	margin: 0;
+}
 html body{
 	font-family: 'Open Sans', 'Roboto', sans-serif;
     letter-spacing: 0;
@@ -57,6 +60,15 @@ a:hover{
 .unread-notification{
 	background-color: #f5f5f5;
 }
+.cus-alert{
+	height: 30px;
+	background: #32CD32;
+	color: #fff;
+	padding: 5px;
+	border-radius: 0;
+	width: 75%;
+	margin-top: 10px;
+}
 /**Switch*/
 .switch{
 	position: relative;
@@ -113,6 +125,7 @@ input:checked + .slider:before{
 .logo{
 	margin-top: 10px;
 }
+/**Index page */
 .desktop-tab-login-form{
 	margin: 0;
 	margin-top: 10px;
@@ -134,7 +147,7 @@ input:checked + .slider:before{
 }
 .large-input-text{
 	width: 100%;
-	margin:15px -5px 20px -10px;
+	margin:15px -5px 10px -10px;
 }
 .button{
 	background-color: #fff;
@@ -143,24 +156,32 @@ input:checked + .slider:before{
 	border:1px solid rgba(0,0,250,250);
 	border-radius: 5px;
 }
+.top-login-form{
+	margin-top: 10px;
+}
 .login-links > a{ 
 	font-size: 15px;
 	color:#000;
 }
 .login-links-forget-psw{
-	margin-top:15px;
+	width: 100px;
 }
-.login-links-remember-me{
-	margin-top: 15px;
+#section-container{
+	background-image: url("../img/index-background.jpeg");
+	background-size: cover;
 }
+
 .site-desc{
 	margin: 150px 0 10px 0;
-	color: #000;}
+	color: #fff!important;
+}
 .site-desc-title{
 	font-size: 50px;
+	font-weight: 700;
 }
 .site-desc-subtitle{
 	font-size: 30px;
+	font-weight: 500;
 }
 
 .form-container{
@@ -174,11 +195,20 @@ input:checked + .slider:before{
 	font-size: 20px;
 	font-weight: 400;
 	margin-top:5px;
-	padding: 5px;
+	padding: 15px;
 }
 .form{
 	margin:5px;
 	padding: 5px;
+}
+.signup-button{
+	margin-bottom: 20px;
+}
+.error-mesg{
+	margin-left: 5px; 
+}
+.invalid-form-border{
+	border-color: #FF0000;
 }
 .button-center{
 	margin-left: 45%;
@@ -187,6 +217,7 @@ input:checked + .slider:before{
 .footer{
 	background-color: #fff;
 	max-height: 90px;
+
 }
 .footer-links{
 	margin:2px 5px 2px 5px;
@@ -199,8 +230,15 @@ input:checked + .slider:before{
 	font-size: 15px;
 }
 /** Complete reg */
+.complete-reg-conatiner{
+	min-height: 600px;
+	box-shadow: 0 1px 4px rgba(0,0,0,.30);
+    border: 1px solid rgba(0,0,0,.09);
+}
 .add-course-container{
-	height: 400px;
+	min-height:430px;
+	margin-top: 20px;
+	box-sizing: border-box;
 }
 .input-course-code{
 	width: 70%;
@@ -211,10 +249,20 @@ input:checked + .slider:before{
 .btn-add-course{
 	margin-left: 30px;
 }
+.added-course-container{
+	margin: 10px;
+	margin-top: 0;
+	padding: 10px;
+}
 .added-course{
 	box-sizing: border-box;
-	margin:5px 5px 5px 20px;
+	list-style: none;
+	display: inline-block;
+	margin-top: 10px;
 	padding: 10px;
+	line-height: 5px;
+	box-shadow: 0 1px 4px rgba(0,0,0,.10);
+    border: 1px solid rgba(0,0,0,.03);
 	border-radius: 10px;
 	font-size: 14px;
 	font-weight: 400;
@@ -225,9 +273,12 @@ input:checked + .slider:before{
 	cursor: pointer;
 }
 .btn-continue{
-	margin-top:150px;
+	margin-bottom: 20px;
 }
-
+.btn-continue-container{
+	margin-top:50px;
+	margin-bottom: 20px;
+}
 /**Feed Page*/
 
 .top-menu{
@@ -401,6 +452,7 @@ input:checked + .slider:before{
 }
 .text-title{
 	font-weight: 700;
+	font-weight: 500;
 	font-size: 22px;
 	line-height: -5px;
 	word-spacing: -1px;
@@ -478,6 +530,13 @@ input:checked + .slider:before{
 /**Upload modal*/
 .upload-container{
 	margin-top: 30px;
+}
+.dropdown-ul{
+	position: absolute;
+	margin-top: 15px;
+	left: -100px;
+	box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
 }
 .file-upload-box{
 	box-sizing: border-box;
@@ -676,6 +735,21 @@ input:checked + .slider:before{
   	}  
 }
 
+.dropdown-ul:after {
+    content: ' ';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+ 	top: -15px;
+ 	left: 73%;
+ 	background:#fff;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	transform: rotate(45deg) translate(6px,6px);
+    box-shadow: -1px -1px 1px -1px rgba(0,0,0,.44);
+}
+
 @media only screen and (max-width: 768px){
 	#pc{
 		display: none;
@@ -764,7 +838,7 @@ input:checked + .slider:before{
 
 @media only screen and (min-width: 769px){
 	.login-links-forget-psw{
-		margin-right: 50%;
+		margin-right: 59%;
 	}
 	.signup-form{
 		margin-top: 12px;
@@ -819,6 +893,3 @@ input:checked + .slider:before{
 	}
 }
 
-@media only screen and (min-width: 769px){
-
-}
