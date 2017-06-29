@@ -1,133 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>CM Template</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CM Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
 </head>
-<style type="text/css">
-	@media only screen and (min-width: 769px){
-		#login-form-con{
-			display: none;
-		}
-	}
-	@media only screen and (min-width: 1200px){
-		.login-links-forget-psw{
-			margin-right: 63%;
-		}
-	}
 
-</style>
 <body>
-	<!--PC header-->
-	<header class="container-fluid header">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-2 col-md-4 col-lg-6">
-					<h1 class="logo text-thin">Logo</h1>
-				</div>
-				<div  class="col-sm-10 col-md-8 col-lg-6 text-right top-login-form">
-					<form id="pc" class="">
-						<span class="input-text-group">
-							<input type="text" class="input-text text-thin" placeholder="Matric No">
-						</span>
-						<span class="input-text-group">
-							<input type="password" class="input-text text-thin" placeholder="Password">
-						</span>
-						<button class="btn button text-thin">Login</button>
-						<p><a href="" class="login-links-forget-psw text-thin">Forgot Password?</a></p>
-					</form>		
-				</div>
-			</div>
-		</div>
-	</header>
-	<!--/pc-header-->
 
-	<section id="section-container" class="container-fluid">
-		<div class="container">
-			<div class="row">
-				<!--Site description-->
-				<div class="col-xs-12 col-sm-6 col-md-8 text-center site-desc">
-					<h1 class="text-uppercase site-desc-title text-thin smallScreen-desc-title text-large">Sharing Just Got Easy</h1>
-					<p class="site-subtitle">share lecture materials with your course mates anytime and anywhere</p>
-				</div>
-				<!--/Site description-->
+    <header>
+        <main class="container">
+            <div><a href="">handouts</a></div>
+            <nav>
+                <a href="">notes</a>
+                <a href="">login</a>
+            </nav>
+        </main>
+    </header>
+    <section>
+        <main class="container">
+            <div class="">
+                <h2>A better way for students to share materials</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique tristique eros nec iaculis. Donec maximus est quis odio dapibus, at congue ipsum porttitor. Quisque vel pharetra mauris, a viverra mi
+                </p>
+            </div>
+            <div class="">
+                <form>
+                    <div class="form-group">
+                        <label for="full name"></label>
+                        <input type='text' placeholder="full name" class="full-width" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Email"></label>
+                        <input type='email' placeholder="email" class="full-width" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password"></label>
+                        <input type='password' placeholder="password" class="full-width" />
+                    </div>
+                    <div class="form-group">
+                        <button class="full-width">Register</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </section>
 
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<!--Mobile Login-->
-					<div id="mobile" class="form-container">
-						<h3 class="form-title text-uppercase text-center">Login</h3>
-						<hr>
-						<form class="form">
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Matric No">
-							</span>
-							<span class="input-text-group">
-								<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
-							</span>
-							<p class="small text-center login-links">
-								<a href="" class="text-thin">Forgot Password?</a>
-							</p>
-							<p class="small text-center text-thin">
-								Don't have an account? <a href="" class="login-links text-thin text-primary">Create Account</a>
-							</p>
-							<br>
-							<button class="btn button text-thin smallScreen-login-button">Login</button>
-						</form>
-					</div>
-					<!--/Mobile Login-->
+    <section>
+        <main class="container">
+            <div class="">
+                <h3></h3>
+            </div>
+        </main>
+    </section>
 
-
-					<!--Sign up-->
-					<div id="pc" class="form-container largeScreen">
-						<h3 class="form-title text-uppercase text-center">Sign up</h3>
-						<hr>
-						<form class="form">
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin invalid-form-border" placeholder="Matric No">
-							</span>
-							<span class="">
-								<p class="error-mesg text-danger text-xs text-2-thin">Matric number already exist</p>
-							</span>
-							<span class="input-text-group">
-								<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
-							</span>
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Name">
-							</span>
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Email">
-							</span>
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Phone no">
-							</span>
-							<span class="input-text-group">
-								<select class="large-input-text input-text text-thin text-muted">
-								<option>Select School</option>
-								<option>FUTA</option>
-							</select>
-							</span>
-							<button class="btn button button-center text-thin smallScreen-signupBottom-button signup-button">Signup</button>
-						</form>
-					</div>
-					<!--/signup-->
-
-				</div>
-			</div>
-		</div>
-	</section>
-	<footer class="container-fluid footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center footer-links">
-					<a href="" class="footer-links text-thin">Privacy</a> | <a href="" class="footer-links text-thin">Terms and Conditions</a> | <a href="" class="footer-links text-thin">About us</a> | <a href="" class="footer-links text-thin">Jobs</a> | <a href="" class="footer-links text-thin">Get in touch</a>
-					<p class="copy-right text-thin">2016 All Right Reserved</p>
-				</div>
-			</div>
-		</div>
-	</footer>
 </body>
+
 </html>
