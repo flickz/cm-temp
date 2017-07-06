@@ -3,18 +3,17 @@
 <head>
 	<title>CM Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"rel="stylesheet" type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<style type="text/css">
-		body{
-			background: #fff !important;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/new-style.css">
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 				$('[data-toggle="tooltip"]').tooltip();
@@ -30,31 +29,21 @@
 	</script>
 </head>
 <body>
-
-		<header class="container-fluid header bottom-shadow">
+	<header class="container-fluid header bottom-shadow fixed-header">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-6">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<h1 class="logo text-thin">Logo</h1>
 					</div>
-					<div class="col-xs-6">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<div class="top-menu text-right">
-							<span class="hidden-sm hidden-xs hidden-md hidden-lg">
-								<button class="btn btn-default top-upload-btn" data-toggle="modal" data-target="#myModal">
-									<i class="fa fa-upload"></i> Upload Material
-								</button>
+							
+							<span  class="search-icon visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
+								<a href="" class="serach-a"><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
 							</span>
 
-							<span  class="search-icon visible-sm-inline visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
-								<a href=""><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
-							</span>
-
-							<span id="search" class="search-icon hidden-sm hidden-xs" data-toggle="tooltip" title="Search" data-placement="bottom">
-								<i class="fa fa-search text-thin" aria-hidden="true"></i>
-							</span>
-
-							<span id="top-search-input-group" class="input-text-group top-search-input-group hide-search">
-								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search for Materials">
+							<span class="visible-sm-inline visible-md-inline hidden-xs top-search-input-group">
+								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search...">
 							</span>
 
 							<span class="note-icon dropdown"> 
@@ -127,6 +116,7 @@
 				</div>
 			</div>
 	</header>
+	
 
 	<section class="container">
 		<div class="row">

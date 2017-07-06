@@ -3,22 +3,24 @@
 <head>
 	<title>CM Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400,500" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
-	<script src="https://use.fontawesome.com/785ae5f132.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/new-style.css">
+
 	<script type="text/javascript">
 			$(document).ready(function(){
 				$('[data-toggle="tooltip"]').tooltip();
 
 				$("#search").click(function(){
-					$("#top-search-input-group").toggleClass("hide-search");
+		 			$("#top-search-input-group").toggleClass("hide-search");
 				});
 
 				$("#top-search-input-text").blur(function(){
@@ -29,30 +31,21 @@
 </head>
 <body>
 
-		<header class="container-fluid header bottom-shadow">
+	<header class="container-fluid header bottom-shadow">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6">
-						<h1 class="logo text-thin">Logo</h1>
+						<h1 class="logo">Logo</h1>
 					</div>
 					<div class="col-xs-6">
 						<div class="top-menu text-right">
-							<span id="pc">
-								<button class="btn btn-default top-upload-btn" data-toggle="modal" data-target="#myModal">
-									<i class="fa fa-upload"></i> Upload Material
-								</button>
+		
+							<span  class="search-icon visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
+								<a href="" class="serach-a"><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
 							</span>
 
-							<span  class="search-icon visible-sm-inline visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
-								<a href=""><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
-							</span>
-
-							<span id="search" class="search-icon hidden-sm hidden-xs" data-toggle="tooltip" title="Search" data-placement="bottom">
-								<i class="fa fa-search text-thin" aria-hidden="true"></i>
-							</span>
-
-							<span id="top-search-input-group" class="input-text-group top-search-input-group hide-search">
-								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search for Materials">
+							<span class="visible-sm-inline visible-md-inline hidden-xs top-search-input-group">
+								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search...">
 							</span>
 
 							<span class="note-icon dropdown"> 
@@ -130,7 +123,7 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12">
-						<div  id="mobile" class="navbar-toggle collapsed nav-bar-icon text-right" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						<div class="navbar-toggle collapsed nav-bar-icon text-right visible-xs-inline hidden-sm hidden-md" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 							<i id="nav-icon" class="fa fa-bars bars-icon" aria-hidden="true"></i>
 						</div>
 						<div id="navbar-collapse-1" role="navigation" class="nav">
@@ -148,276 +141,334 @@
 	
 	
 	<!--Material Feed-->
-	<section class="container">
+	<section class="container feed-container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-md-8">
 
-				<div class="box">
-					<div class="author-info-date">
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name ">Oluwaseun Omoyajowo</a> for <a href="" class="text-course-code">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin text-muted">4 days ago</p>
-						</span>
-					</div>
-					<div class="text-box">
-						<h2><a href="" class="text-title text-muted">Introduction to Concreting Operation</a></h2>
-						<p class="text-thin text-para text-muted">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, iaculis sed nisi vitae, ornare consectetur ipsum. Aliquam dictum non metus in dapibus. Donec mattis massa eget libero congue, in posuere leo dictum. Donec vitae dapibus turpis. Phasellus semper sem a sem consectetur blandit eget eget turpis. Sed vulputate egestas nunc, in bibendum risus fringilla non. Proin tempor finibus euismod.
-							<br><br>
-							<a href="" class="small read-more  text-primary">Read more</a>
-						</p>
-					</div>
-					<div class="feed-info">
-						<hr class="feed-hor-line">
-						<div class="feed-info-text">
-							<span class="note-text">
-								<a href="" class="small text-muted note-text "><strong>NOTE</strong></a>
-							</span>
-							<span class="small text-muted readers-num text-right">
-								<i class="fa fa-eye" aria-hidden="true"></i> 122
-							</span>
-						</div>
-					</div>
-				</div>
-				<!--Mobile Upload Button-->
-				<button id="mobile" class="btn btn-default mobile-upload-btn"><i class="fa fa-upload"></i></button>
-				<!--/Mobile Upload Button-->
+				<div class="post-card">
+					<div class="post-content">
+						<div class="postPreview-header">
+							<div class="left-controls controlSections">
+								<a href="/@flickz" class="userPic">
+									<img src="img/avatar1.png" />
+								</a>
+								<div class="userInfo">
+									<p class="name">
+										<a href="/@flickz">Oluwaseun Ojo</a>
+									</p>
+									<p class="info">
+										<a href="/post">1h</a>
+										<span class="middot"> . </span>
+										<a href="/post">asked a question</a>
 
-				<div class="box">
-					<div class="author-info-date">
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name ">Oluwaseun Omoyajowo</a> for <a href="" class="text-course-code">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin text-muted">4 days ago</p>
-						</span>
-					</div>
-					<div class="text-box">
-						<h2><a href="" class="text-title text-muted">Introduction to Concreting Operation</a></h2>
-						<p class="text-thin text-para text-muted">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, iaculis sed nisi vitae, ornare consectetur ipsum. Aliquam dictum non metus in dapibus. Donec mattis massa eget libero congue, in posuere leo dictum. Donec vitae dapibus turpis. Phasellus semper sem a sem consectetur blandit eget eget turpisn tempor finibus euismod.
-							<br><br>
-							<a href="" class="small read-more  text-primary">Read more</a>
-						</p>
-					</div>
-					<div class="feed-info">
-						<hr class="feed-hor-line">
-						<div class="feed-info-text">
-							<span class="note-text">
-								<a href="" class="small text-muted note-text "><strong>NOTE</strong></a>
-							</span>
-							<span class="small text-muted readers-num text-right">
-								<i class="fa fa-eye" aria-hidden="true"></i> 320
-							</span>
+									</p>
+								</div>
+							</div>
+							<div class="right-control">
+								<div class="tagsWrap">
+									<button class="tagsAct">Bdg202 +2</button>
+								</div>
+								<div class="optionsWrap">
+									<button class="optionsAct">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="post-title-data">
+							<h2>
+								<a href="/hfaosfhoafhoafas">How to build a microservice in Nodejs web app?</a>
+							</h2>
+						</div>
+						<div class="post-meta-desc">
+							<div class="post-in-brief">
+								<p>
+									Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+								</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="footer-content">
+								<div class="left-section">
+									<button class="footerAct upvote">
+										<i class="fa fa-thumbs-o-up"></i>
+									</button>
+									<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+								</div>
+								<div class="rightActWrap">
+									<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+										<i class="fa fa-share-alt" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="box">
-					<div class="author-info-date">
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name ">Oluwaseun Omoyajowo</a> for <a href="" class="text-course-code">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin text-muted">4 days ago</p>
-						</span>
+				<div class="post-card">
+					<div class="post-content">
+						<div class="postPreview-header">
+							<div class="left-controls controlSections">
+								<a href="/@flickz" class="userPic">
+									<img src="img/avatar1.png" />
+								</a>
+								<div class="userInfo">
+									<p class="name">
+										<a href="/@flickz">Oyerinde Temtayo</a>
+									</p>
+									<p class="info">
+										<a href="/post">1h</a>
+										<span class="middot"> . </span>
+										<a href="/post">shared a material</a>
+
+									</p>
+								</div>
+							</div>
+							<div class="right-control">
+								<div class="tagsWrap">
+									<button class="tagsAct">Cve394 +2</button>
+								</div>
+								<div class="optionsWrap">
+									<button class="optionsAct">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="post-title-data">
+							<h2>
+								<a href="/hfaosfhoafhoafas">Moment Distribution Method</a>
+							</h2>
+						</div>
+						<div class="post-meta-desc">
+							<div class="post-in-brief">
+								<p>
+									Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+								</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="footer-content">
+								<div class="left-section">
+									<button class="footerAct upvote">
+										<i class="fa fa-thumbs-o-up"></i>
+									</button>
+									<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+								</div>
+								<div class="rightActWrap">
+									<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+										<i class="fa fa-share-alt" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="text-box">
-						<h2><a href="" class="text-title text-muted">Introduction to Concreting Operation</a></h2>
-						<p class="text-thin text-para text-muted">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, iaculis sed nisi vitae, ornare consectetur ipsum. Aliquam dictum non metus in dapibus. Donec mattis massa eget libero congue, in posuere leo dictum. Donec vitae dapibus turpis. Phasellus semper sem a sem consectetur blandit eget eget turpis. Sed vulputate egestas nunc, in bibendum risus fringilla non. Proin tempor finibus euismod.
-							<br><br>
-							<a href="" class="small read-more  text-primary">Download</a>
-						</p>
-					</div>
-					<div class="feed-info">
-						<hr class="feed-hor-line">
-						<div class="feed-info-text">
-							<span class="note-text">
-								<a href="" class="small text-muted note-text "><b>HANDOUT</b></a>
-							</span>
-							<span class="small text-muted readers-num text-right">
-								<i class="fa fa-download" aria-hidden="true"></i> 122
-							</span>
+				</div>
+				
+				<div class="post-card">
+					<div class="post-content">
+						<div class="postPreview-header">
+							<div class="left-controls controlSections">
+								<a href="/@flickz" class="userPic">
+									<img src="img/avatar1.png" />
+								</a>
+								<div class="userInfo">
+									<p class="name">
+										<a href="/@flickz">Oluwaseun Ojo</a>
+									</p>
+									<p class="info">
+										<a href="/post">1h</a>
+										<span class="middot"> . </span>
+										<a href="/post">asked a question</a>
+
+									</p>
+								</div>
+							</div>
+							<div class="right-control">
+								<div class="tagsWrap">
+									<button class="tagsAct">Bdg202 +2</button>
+								</div>
+								<div class="optionsWrap">
+									<button class="optionsAct">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="post-title-data">
+							<h2>
+								<a href="/hfaosfhoafhoafas">How to build a microservice in Nodejs web app?</a>
+							</h2>
+						</div>
+						<div class="post-meta-desc">
+							<div class="post-in-brief">
+								<p>
+									Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+								</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="footer-content">
+								<div class="left-section">
+									<button class="footerAct upvote">
+										<i class="fa fa-thumbs-o-up"></i>
+									</button>
+									<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+								</div>
+								<div class="rightActWrap">
+									<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+										<i class="fa fa-share-alt" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
 			</div>
 
-			<div  class="col-sm-4 col-md-4 hidden-xs">
-				<div class="box">
-					<h2 class="text-center text-thin small">Most Downloaded Material</h2>
-					
-					<div class="author-info-date most-dwn-box">
-						<hr class="feed-hor-line">
-						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> for <a href="" class="text-thin text-course-code small">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin small">4 days ago</p>
-						</span>
-						<span class="nums-dwn">
-							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
-						</span>
-						<hr class="feed-hor-line">
+			<div class="col-sm-4 col-md-4 hidden-xs">
+				
+				<div class="feedCourse-list-box">
+					<div class="feedCourse-list-header">
+						<p>Your course list</p>
 					</div>
-
-					<div class="author-info-date most-dwn-box">
-						<hr class="feed-hor-line">
-						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> for <a href="" class="text-thin text-course-code small">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin small">4 days ago</p>
-						</span>
-						<span class="nums-dwn">
-							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
-						</span>
-						<hr class="feed-hor-line">
-					</div>
-					
-					<div class="author-info-date most-dwn-box">
-						<hr class="feed-hor-line">
-						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> for <a href="" class="text-thin text-course-code small">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin small">4 days ago</p>
-						</span>
-						<span class="nums-dwn">
-							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
-						</span>
-						<hr class="feed-hor-line">
-					</div>
-					
-					<div class="author-info-date most-dwn-box">
-						<hr class="feed-hor-line">
-						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> for <a href="" class="text-thin text-course-code small">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin small">4 days ago</p>
-						</span>
-						<span class="nums-dwn">
-							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
-						</span>
-						<hr class="feed-hor-line">
+					<hr class="your-course-list-hr">
+					<div class="feedCourse-list-wrapper">
+						<ul class="">
+							<li class="">
+								<a href="">Bdg303</a>
+							</li>
+							<li class="">
+								<a href="">Bdg303</a>
+							</li>
+							<li class="">
+								<a href="">Bdg303</a>
+							</li>
+							<li class="">
+								<a href="">Bdg303</a>
+							</li>
+							<li class="">
+								<a href="">Bdg303</a>
+							</li>
+							<li class="">
+								<a href="">Bdg303</a>
+							</li>
+							<li class="">
+								<a href="">Bdg303</a>
+							</li>
+							<li class="">
+								<a href="">Bdg303</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 
-				
+				<div class="feedCourse-list-box mostDownloaded-box">
+					<h2 class="text-center text-thin small">Most Downloaded Material</h2>
+					<hr>
+					<div class="author-info-date most-dwn-box">
+						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
+						<span class="avatar">
+							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="small">
+							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> <a href="" class="text-thin text-course-code small">BDG203</a>
+						</span>
+						<span class="date-box">
+							<p class="date-uploaded text-thin small">4h</p>
+						</span>
+						<span class="nums-dwn">
+							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
+						</span>
+						<hr class="feed-hor-line">
+					</div>
+					<div class="author-info-date most-dwn-box">
+						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
+						<span class="avatar">
+							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="small">
+							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> <a href="" class="text-thin text-course-code small">BDG203</a>
+						</span>
+						<span class="date-box">
+							<p class="date-uploaded text-thin small">4h</p>
+						</span>
+						<span class="nums-dwn">
+							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
+						</span>
+						<hr class="feed-hor-line">
+					</div>
+					<div class="author-info-date most-dwn-box">
+						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
+						<span class="avatar">
+							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="small">
+							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> <a href="" class="text-thin text-course-code small">BDG203</a>
+						</span>
+						<span class="date-box">
+							<p class="date-uploaded text-thin small">4h</p>
+						</span>
+						<span class="nums-dwn">
+							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
+						</span>
+						<hr class="feed-hor-line">
+					</div>
+					<div class="author-info-date most-dwn-box">
+						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
+						<span class="avatar">
+							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="small">
+							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> <a href="" class="text-thin text-course-code small">BDG203</a>
+						</span>
+						<span class="date-box">
+							<p class="date-uploaded text-thin small">4h</p>
+						</span>
+						<span class="nums-dwn">
+							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
+						</span>
+						<hr class="feed-hor-line">
+					</div>
+					<div class="author-info-date most-dwn-box">
+						<a href=""><h3 class="text-left small most-dwn-material-title">Introduction to Concreteing Operation</h3></a>
+						<span class="avatar">
+							<img class="avatar-image-icon avatar-image most-dwn-avatar-image" src="img/avatar1.png" alt="profile-pic">
+						</span>
+						<span class="small">
+							<a href="" class="author-name text-thin small">Oluwaseun Ojo</a> <a href="" class="text-thin text-course-code small">BDG203</a>
+						</span>
+						<span class="date-box">
+							<p class="date-uploaded text-thin small">4h</p>
+						</span>
+						<span class="nums-dwn">
+							<p class="text-center text-thin small"><i class="fa fa-download"></i> 112</p>
+						</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 	<!--/Material Feed-->
-
-	<footer class="container-fluid footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center footer-links">
-					<a href="" class="footer-links text-thin">Privacy</a> | <a href="" class="footer-links text-thin">Terms and Conditions</a> | <a href="" class="footer-links text-thin">About us</a> | <a href="" class="footer-links text-thin">Jobs</a> | <a href="" class="footer-links text-thin">Get in touch</a>
-					<p class="copy-right text-thin text-muted">2016 All Right Reserved</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	
-<!--pc uplaod modal-->
-	
-<!-- Modal -->
-	<div id="myModal" class="modal fade" role="dialog">
-	  <div class="modal-dialog modal-lg">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title text-thin text-center">Add New Materials</h4>
+	<div class="modal share-modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content share-modal-content">
+	      <div class="modal-header share-modal-header">
+	      	<p class="modal-title">Share this post</p>
+	      	<p class="post-title">How to build microservices for simple blog app?</p>
 	      </div>
-	      <div class="modal-body">
-	      	<form>
-		      	<div class="file-upload-box ">
-		      		<p class="text-xs upload-instruction">Choose files to upload. You can select more than one file at a time. You can also drag and drop files anywhere on this page to start uploading.</p>
-		      		<p class="text-xs upload-instruction upload-special-note">Note: Only <span class="text-danger">.pdf</span>, <span class="text-danger">.docs</span>, <span class="text-danger">.txt</span> and <span class="text-danger">.jpg</span>, allowed.</p>
-		      		<div class="upload-progress-box">
-		      			<table class="table table-condensed">
-		      				<tr>
-		      					<td class="small"><i class="fa fa-file-pdf-o"></i> bdg203-1.pdf</td>
-		      					<td class="small">233Kb</td>
-		      					<td><i class="fa fa-spinner fa-spin"></i></td>
-		      				</tr>
-		      				<tr>
-		      					<td class="small"><i class="fa fa-file-text-o"></i> bdg203-2.docs</td>
-		      					<td class="small">1Mb</td>
-		      					<td><i class="fa fa-check-circle"></i></td>
-		      				</tr>
-		      				<tr>
-		      					<td class="small"><i class="fa fa-file-picture-o"></i> bdg203-3.jpg</td>
-		      					<td class="small">500Kb</td>
-		      					<td><i class="fa fa-spinner fa-spin"></i></td>
-		      				</tr>
-		      			</table>
-		      		</div>
-		      			<form>
-		      				<input hidden type="file" id="inputFile"  multiple class="hidden">
-		      				<button type="button" id="selectButton" class="button small center-block modal-upload-btn">Choose Files</button>
-		      			</form>
-		      	
-		      	</div>
-		        <div class="upload-box">
-						<div class="input-text-group">
-							<input type="text" class="input-text small request-input upload-input-lg" placeholder="Topic">
-						</div>
-						<div class="input-text-group">
-							<span>
-								<input type="text" class="input-text small request-input request-input-sm" placeholder="Course code">
-							</span>
-							<span class="upload-select-type text-right">
-								<select class="input-text text-muted request-input request-input-sm">
-									<option class="small text-muted">Type</option>
-									<option class="small">Handout</option>
-									<option class="small">Note</option>
-									<option class="small">Assignment</option>
-								</select>
-							</span>
-						</div>
-						<div class="input-text-group">
-							<textarea class="input-text small request-input upload-input-lg upload-description-textarea" placeholder="Material Description"></textarea>
-						</div>
-						<button class="button center-block small request-btn">Upload Materials</button>
-					</div>
-		      	</form>
-		    </div>
+	      <div class="modal-body share-modal-soical-btn">
+	      	<a href="#" class="fa fa-facebook social-btn"></a>
+			<a href="#" class="fa fa-twitter social-btn"></a>
+			<a href="#" class="fa fa-whatsapp social-btn"></a>
+			<a href="#" class="fa fa-linkedin social-btn"></a>
+			<div class="form-input post-link">
+				<button class="signin-btn copy-btn">Copy URL <i class="fa fa-copy"></i></button>
+				<input type="text" value="https://mater.de/sfd" readonly>		
+			</div>
+	      </div>
 	    </div>
-
 	  </div>
 	</div>
 <!--/pc upload modal-->

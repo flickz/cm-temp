@@ -3,110 +3,255 @@
 <head>
 	<title>CM Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link 
-  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-  rel="stylesheet"  type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"> 
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<style>
-		.form-container{
-			max-width: 100%;
+	<link rel="stylesheet" type="text/css" href="css/new-style.css">
+	<style type="text/css">
+		@media only screen and (min-width: 768px){
+			.add-course-box-fluid{
+				background:;
+			}
+			.addedCourses-ul li{
+				font-size: 14px;
+			}
+			.complete-btn-wrapper{
+				margin-left: 75% !important;
+			}
 		}
+		@media only screen and (min-width: 970px){
+			.section-2{
+				background: inherit;
+			}
+			.addCourse-section{
+				background: #fff;
+				margin-top: 10px;
+				box-shadow: 0 3px 2px 0 rgba(0,0,0,.2);
+			}
+			.addCourse-box{
+				margin: 0 30px 0 60px;
+			}
+			.complete-btn-wrapper{
+				margin-left: 80% !important;
+			}
+		}
+		.addCourse-box{
+			min-height: 500px;
+		}
+		.addCourse-box-header{
+			margin-top: 10px;
+			padding: 15px 0;
+		}
+		.addCourse-box-header div p:first-child{
+		    font-size: 15px;
+		    font-weight: 600;
+		    color: #9e9e9e;
+		    margin: 0 0 4px;
+		}
+		.addCourse-box-header div p:last-child{
+		    font-size: 14px;
+		    font-weight: 300;
+		    color: #9e9e9e;
+		    margin: 0 0 3px;
+		}
+		.addCourse-box-header div h3{
+		    font-size: 26px;
+		    font-weight: 300;
+		    color: #212121;
+		    margin: 20px 0 15px;
+		}
+		.addCourse-box-form{
+			margin: 10px 0 30px; 
+		}
+		.addCourse-footer{
+		    width: 100%;
+		    height: 70px;
+		    margin: auto;
+		    background: #fff;
+		    position: fixed;
+		    bottom: 0;
+		    left: 0;
+		}
+		.addCourse-footer-contentWrapper{
+			width: 100%;
+			background: #fff;
+			display: flex;
+			position: relative;
+			margin: auto;
+			align-items: center;
+		}
+		.addCourse-footer-contentWrapper::before {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 10px;
+		    content: "";
+		    -webkit-box-shadow: 0 -5px 8px 0 rgba(0,0,0,.06);
+		    -moz-box-shadow: 0 -5px 8px 0 rgba(0,0,0,.06);
+		    box-shadow: 0 -5px 8px 0 rgba(0,0,0,.06);
+		}
+		.complete-btn-wrapper{
+			text-align: right;
+			margin: 8px 5px 3px 50%;
+			padding: 5px;
+		}
+		.complete-btn{
+		    display: inline-block;
+		    padding: 12px 32px;
+		    margin: 0 8px 0 0;
+		    font-size: 15px;
+		    font-weight: 500;
+		    color: #fff;
+    		background: #66bb6a;
+		    -webkit-border-radius: 2px;
+		    -moz-border-radius: 2px;
+		    outline: none;
+		    border: 0;
+		    border-radius: 2px;
+		}
+		.complete-btn i{
+			font-weight: 100;
+			font-size: 12px;
+		}
+		.form-input{
+			width: 100%;
+			margin-bottom: 40px;
+		}
+
+		.form-input input{
+			width: 80%;
+			padding: 8px;
+			font-size: 16px;
+			color: #9e9e9e;
+			border: 0;
+			border-bottom: 1px solid #9e9e9e;
+		}
+		.form-input input:focus{
+			border-bottom: 1px solid #59d3e3;
+		}
+		.addCourse-btn{
+			width: 50px;
+			height: 50px;
+			margin-left: 20px;
+			outline: none;
+			border: 0;
+			border-radius: 50%;
+			background: #fff;
+			color: #26c6da;
+			box-shadow: 0 3px 2px 0 rgba(0,0,0,.2);
+			padding: 5px;
+		}
+		.addedCourses-wrapper{
+			margin-top: 20px;
+			margin-left: 0;
+		}
+		.addedCourses-ul{
+			padding: 0;
+		}
+		.addedCourses-ul li{
+			list-style: none;
+			display: inline-block;
+			margin: 5px 10px 15px;
+			padding: 10px;
+			color: #26c6da;
+			font-size: 16px;
+			font-weight: 300;
+			box-shadow: 1px 3px 2px 0 rgba(0,0,0,.1);
+		}
+		.addedCourses-ul li span button{
+			outline: none;
+			border: 0;
+			background: inherit;
+		}
+
 	</style>
 </head>
 <body>
 	<header class="container-fluid header">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-6 col-sm-6 col-md-6">
-					<h1 class="logo text-thin">Logo</h1>
+				<div class="col-xs-6 col-sm-2 col-md-4 col-lg-6">
+					<h3 class="logo">Logo</h3>
 				</div>
 			</div>
+		</div>
 	</header>
-
-	<section id="section-container" class="container-fluid complete-reg-conatiner">
-		<div class="container">
+	<section class="container-fluid section-2">
+		<section class="container addCourse-section">
 			<div class="row">
-				<div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-					
-					<div class="form-container add-course-container">
-						<h2 class="text-center text-thin form-title">Add your course codes</h2>
-						<hr class="hor-line">
-						<form class="form-course-code">
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin input-course-code" placeholder="Course code">
-							</span>
-							<button class="btn button text-thin btn-add-course"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
-						</form>
-						
-						<ul class="added-course-container">
-							<span>
-								<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
-							<li class="added-course">BDG203 <i class="fa fa-close" aria-hidden="true"></i></li>
+				<div class="col-xs-12 col-sm-12">
+					<div class="addCourse-box">
+						<div class="addCourse-box-header">
+							<div>
+								<p>Just one more thing to do.</p>
+								<h3>Let's follow some courses</h3>
+								<p>Add the courses you're offering and interested in</p>
+							</div>
+						</div>
+						<div class="addCourse-box-form">
+							<div class="form-input">
+								<input type="text" placeholder="Course code" name="couresCode" class="addCourse-input">
+								<button class="addCourse-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+							</div>
+						</div>
+						<div class="addedCourses-wrapper">
+							<ul class="addedCourses-ul">
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
+								<li>
+									<span>Bdg204 <button><i class="fa fa-times" aria-hidden="true"></i></button></span>
+								</li>
 
-							</span>							
-						</ul>
-						<div class="alert alert-success cus-alert alert-dismissable center-block"> Successfully updated </div>
-						<div class="btn-continue-container text-center">
-							<button class="btn button btn-continue text-thin">Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+							</ul>
+						</div>
+					</div>
+					<div class="addCourse-footer">
+						<div class="addCourse-footer-contentWrapper">
+							<div class="complete-btn-wrapper">
+								<button class="complete-btn">Complete <i class="fa fa-arrow-right "> </i></button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<footer class="container-fluid footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center footer-links">
-					<a href="" class="footer-links text-thin">Privacy</a> | <a href="" class="footer-links text-thin">Terms and Conditions</a> | <a href="" class="footer-links text-thin">About us</a> | <a href="" class="footer-links text-thin">Jobs</a> | <a href="" class="footer-links text-thin">Get in touch</a>
-					<p class="copy-right text-thin">2016 All Right Reserved</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+	</section>
 </body>
 </html>

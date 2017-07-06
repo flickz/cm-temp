@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/material.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <style type="text/css">
@@ -13,13 +14,21 @@
 		#login-form-con{
 			display: none;
 		}
+
 	}
 	@media only screen and (min-width: 1200px){
 		.login-links-forget-psw{
 			margin-right: 63%;
 		}
+	} 
+	.form-container{
+		width: 512px;
 	}
-
+	.login-links{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		color: #3f51b5;
+	}
 </style>
 <body>
 	<!--PC header-->
@@ -27,7 +36,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-2 col-md-4 col-lg-6">
-					<h1 class="logo text-thin">Logo</h1>
+					<h3 class="logo text-thin">Logo</h3>
 				</div>
 				<div  class="col-sm-10 col-md-8 col-lg-6 text-right top-login-form">
 					<form id="pc" class="">
@@ -51,19 +60,20 @@
 			<div class="row">
 				<!--Site description-->
 				<div class="col-xs-12 col-sm-6 col-md-8 text-center site-desc">
-					<h1 class="text-uppercase site-desc-title text-thin smallScreen-desc-title text-large">Sharing Just Got Easy</h1>
+					<h4 class="text-uppercase site-desc-title text-thin smallScreen-desc-title text-large">Sharing Just Got Easy</h4>
 					<p class="site-subtitle">share lecture materials with your course mates anytime and anywhere</p>
 				</div>
 				<!--/Site description-->
 
 				<div class="col-xs-12 col-sm-6 col-md-4">
 					<!--Mobile Login-->
-					<div id="mobile" class="form-container">
-						<h3 class="form-title text-uppercase text-center">Login</h3>
-						<hr>
+					<div id="mobile" class="form-container mdl-card">
+						
+							<h3 class="form-title text-uppercase text-center">Login</h3>
+						
 						<form class="form">
 							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Matric No">
+								<input type="text" class="large-input-text input-text text-thin " placeholder="Matric No">
 							</span>
 							<span class="input-text-group">
 								<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
@@ -71,11 +81,11 @@
 							<p class="small text-center login-links">
 								<a href="" class="text-thin">Forgot Password?</a>
 							</p>
-							<p class="small text-center text-thin">
-								Don't have an account? <a href="" class="login-links text-thin text-primary">Create Account</a>
+							<p class="small text-center text-thin ">
+								Don't have an account? <a href="" class="text-thin text-primary login-links">Create Account</a>
 							</p>
-							<br>
-							<button class="btn button text-thin smallScreen-login-button">Login</button>
+							
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored text-thin smallScreen-login-button center-block">Login</button>
 						</form>
 					</div>
 					<!--/Mobile Login-->

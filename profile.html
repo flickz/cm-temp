@@ -3,13 +3,17 @@
 <head>
 	<title>CM Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"rel="stylesheet" type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/new-style.css">
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 				$('[data-toggle="tooltip"]').tooltip();
@@ -26,7 +30,7 @@
 </head>
 <body>
 
-		<header class="container-fluid header bottom-shadow">
+	<header class="container-fluid header bottom-shadow fixed-header">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -34,22 +38,13 @@
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<div class="top-menu text-right">
-							<span class="hidden-sm hidden-xs hidden-md hidden-lg">
-								<button class="btn btn-default top-upload-btn" data-toggle="modal" data-target="#myModal">
-									<i class="fa fa-upload"></i> Upload Material
-								</button>
+							
+							<span  class="search-icon visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
+								<a href="" class="serach-a"><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
 							</span>
 
-							<span  class="search-icon visible-sm-inline visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
-								<a href=""><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
-							</span>
-
-							<span id="search" class="search-icon hidden-sm hidden-xs" data-toggle="tooltip" title="Search" data-placement="bottom">
-								<i class="fa fa-search text-thin" aria-hidden="true"></i>
-							</span>
-
-							<span id="top-search-input-group" class="input-text-group top-search-input-group hide-search">
-								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search for Materials">
+							<span class="visible-sm-inline visible-md-inline hidden-xs top-search-input-group">
+								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search...">
 							</span>
 
 							<span class="note-icon dropdown"> 
@@ -123,7 +118,7 @@
 			</div>
 	</header>
 	
-	<section class="container-fluid bottom-shadow background-color-fff profile-detail-box">
+	<section class="container-fluid bottom-shadow background-color-fff marginx60px">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -143,13 +138,13 @@
 						</div>
 						<div class="types-box">
 							<span class="search-type">
-								<a href="" class="small text-muted  active-link">Handouts</a>
+								<button class="small text-muted  active-link">All <span>(11)</span></button>
 							</span>
 							<span class="search-type">
-								<a href="" class="small text-muted search-type-link">Notes</a>
+								<button class="small text-muted search-type-link">Materials <span>(4)</span></button>
 							</span>
 							<span class="search-type">
-								<a href="" class="small text-muted search-type-link">Assignments</a>
+								<button class="small text-muted search-type-link">Notes <span>(7)</span></buttton>
 							</span>
 						</div>
 					</div>
@@ -160,75 +155,207 @@
 	<section class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
-				<div class="box">
-					<div class="author-info-date">
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name ">Oluwaseun Omoyajowo</a> for <a href="" class="text-course-code">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin text-muted">4 days ago</p>
-						</span>
-					</div>
-					<div class="text-box">
-						<h2><a href="" class="text-title text-muted">Introduction to Concreting Operation</a></h2>
-						<p class="text-thin text-para text-muted">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, iaculis sed nisi vitae, ornare consectetur ipsum. Aliquam dictum non metus in dapibus. Donec mattis massa eget libero congue, in posuere leo dictum. Donec vitae dapibus turpis. Phasellus semper sem a sem consectetur blandit eget eget turpis. Sed vulputate egestas nunc, in bibendum risus fringilla non. Proin tempor finibus euismod.
-							<br><br>
-							<a href="" class="small read-more  text-primary">Read more</a>
-						</p>
-					</div>
-					<div class="feed-info">
-						<hr class="feed-hor-line">
-						<div class="feed-info-text">
-							<span class="note-text">
-								<a href="" class="small text-muted note-text "><strong>NOTE</strong></a>
-							</span>
-							<span class="small text-muted readers-num text-right">
-								<i class="fa fa-eye" aria-hidden="true"></i> 122
-							</span>
+				<div class="post-card profile-post-card">
+					<div class="post-content">
+						<div class="postPreview-header">
+							<div class="left-controls controlSections">
+								<a href="/@flickz" class="userPic">
+									<img src="img/avatar1.png" />
+								</a>
+								<div class="userInfo">
+									<p class="name">
+										<a href="/@flickz">Oluwaseun Ojo</a>
+									</p>
+									<p class="info">
+										<a href="/post">1h</a>
+										<span class="middot"> . </span>
+										<a href="/post">asked a question</a>
+
+									</p>
+								</div>
+							</div>
+							<div class="right-control">
+								<div class="tagsWrap">
+									<button class="tagsAct">Bdg202 +2</button>
+								</div>
+								<div class="optionsWrap">
+									<button class="optionsAct">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="post-title-data">
+							<h2>
+								<a href="/hfaosfhoafhoafas">How to build a microservice in Nodejs web app?</a>
+							</h2>
+						</div>
+						<div class="post-meta-desc">
+							<div class="post-in-brief">
+								<p>
+									Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+								</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="footer-content">
+								<div class="left-section">
+									<button class="footerAct upvote">
+										<i class="fa fa-thumbs-o-up"></i>
+									</button>
+									<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+								</div>
+								<div class="rightActWrap">
+									<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+										<i class="fa fa-share-alt" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="box">
-					<div class="author-info-date">
-						<span class="avatar">
-							<img class="avatar-image-icon avatar-image" src="img/avatar1.png" alt="profile-pic">
-						</span>
-						<span class="small">
-							<a href="" class="author-name ">Oluwaseun Omoyajowo</a> for <a href="" class="text-course-code">BDG203</a>
-						</span>
-						<span class="date-box">
-							<p class="date-uploaded text-thin text-muted">4 days ago</p>
-						</span>
-					</div>
-					<div class="text-box">
-						<h2><a href="" class="text-title text-muted">Introduction to Concreting Operation</a></h2>
-						<p class="text-thin text-para text-muted">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, iaculis sed nisi vitae, ornare consectetur ipsum. Aliquam dictum non metus in dapibus. Donec mattis massa eget libero congue, in posuere leo dictum. Donec vitae dapibus turpis. Phasellus semper sem a sem consectetur blandit eget eget turpis. Sed vulputate egestas nunc, in bibendum risus fringilla non. Proin tempor finibus euismod.
-							<br><br>
-							<a href="" class="small read-more  text-primary">Read more</a>
-						</p>
-					</div>
-					<div class="feed-info">
-						<hr class="feed-hor-line">
-						<div class="feed-info-text">
-							<span class="note-text">
-								<a href="" class="small text-muted note-text "><strong>NOTE</strong></a>
-							</span>
-							<span class="small text-muted readers-num text-right">
-								<i class="fa fa-eye" aria-hidden="true"></i> 122
-							</span>
+				<div class="post-card profile-post-card">
+					<div class="post-content">
+						<div class="postPreview-header">
+							<div class="left-controls controlSections">
+								<a href="/@flickz" class="userPic">
+									<img src="img/avatar1.png" />
+								</a>
+								<div class="userInfo">
+									<p class="name">
+										<a href="/@flickz">Oyerinde Temtayo</a>
+									</p>
+									<p class="info">
+										<a href="/post">1h</a>
+										<span class="middot"> . </span>
+										<a href="/post">shared a material</a>
+
+									</p>
+								</div>
+							</div>
+							<div class="right-control">
+								<div class="tagsWrap">
+									<button class="tagsAct">Cve394 +2</button>
+								</div>
+								<div class="optionsWrap">
+									<button class="optionsAct">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="post-title-data">
+							<h2>
+								<a href="/hfaosfhoafhoafas">Moment Distribution Method</a>
+							</h2>
+						</div>
+						<div class="post-meta-desc">
+							<div class="post-in-brief">
+								<p>
+									Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+								</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="footer-content">
+								<div class="left-section">
+									<button class="footerAct upvote">
+										<i class="fa fa-thumbs-o-up"></i>
+									</button>
+									<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+								</div>
+								<div class="rightActWrap">
+									<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+										<i class="fa fa-share-alt" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				
+				<div class="post-card profile-post-card">
+					<div class="post-content">
+						<div class="postPreview-header">
+							<div class="left-controls controlSections">
+								<a href="/@flickz" class="userPic">
+									<img src="img/avatar1.png" />
+								</a>
+								<div class="userInfo">
+									<p class="name">
+										<a href="/@flickz">Oluwaseun Ojo</a>
+									</p>
+									<p class="info">
+										<a href="/post">1h</a>
+										<span class="middot"> . </span>
+										<a href="/post">asked a question</a>
 
+									</p>
+								</div>
+							</div>
+							<div class="right-control">
+								<div class="tagsWrap">
+									<button class="tagsAct">Bdg202 +2</button>
+								</div>
+								<div class="optionsWrap">
+									<button class="optionsAct">
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="post-title-data">
+							<h2>
+								<a href="/hfaosfhoafhoafas">How to build a microservice in Nodejs web app?</a>
+							</h2>
+						</div>
+						<div class="post-meta-desc">
+							<div class="post-in-brief">
+								<p>
+									Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+								</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="footer-content">
+								<div class="left-section">
+									<button class="footerAct upvote">
+										<i class="fa fa-thumbs-o-up"></i>
+									</button>
+									<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+								</div>
+								<div class="rightActWrap">
+									<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+										<i class="fa fa-share-alt" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-
+	<div class="modal share-modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content share-modal-content">
+	      <div class="modal-header share-modal-header">
+	      	<p class="modal-title">Share this post</p>
+	      	<p class="post-title">How to build microservices for simple blog app?</p>
+	      </div>
+	      <div class="modal-body share-modal-soical-btn">
+	      	<a href="#" class="fa fa-facebook social-btn"></a>
+			<a href="#" class="fa fa-twitter social-btn"></a>
+			<a href="#" class="fa fa-whatsapp social-btn"></a>
+			<a href="#" class="fa fa-linkedin social-btn"></a>
+			<div class="form-input post-link">
+				<button class="signin-btn copy-btn">Copy URL <i class="fa fa-copy"></i></button>
+				<input type="text" value="https://mater.de/sfd" readonly>		
+			</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 </body>
 </html>
