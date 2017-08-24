@@ -3,16 +3,63 @@
 <head>
 	<title>CM Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400,500" rel="stylesheet">
-	<link rel="stylesheet" href="css/trumbowyg.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/medium-editor.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"rel="stylesheet" type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/medium-editor.min.css">
+	<link rel="stylesheet" type="text/css" href="css/default.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/new-style.css">
+	<style type="text/css">
+		.editor-section{
+			margin-top:70px;
+		}
+		.editor-form-wrapper{
+			margin-top: 20px;
+			padding: 20px 0;
+		}
+		.editor-title-wrapper{
+
+		}
+		.editor-title-wrapper input{
+    		width: 100%;
+			font-size: 35px;
+			padding: 10px 0;
+			line-height: 1.04;
+    		letter-spacing: -.029em;
+    		border: 0;
+		}
+		.btn-wrapper{
+			text-align: right;
+		}
+		.btn-wrapper .btn-list{
+			list-style: none;
+			display: inline-block;
+			margin: 0 10px 0 5px;
+		}
+		.btn-list button{
+			padding: 10px;
+			outline: none;
+			border: 0;
+		}
+		.btn-list .btn-publish{
+			background: #31c85e;
+			color: #fff;
+		}
+		.editor-body-wrapper{
+			margin-top: 10px;
+		}
+		.editor{
+			outline: none;
+		}
+	</style>
 </head>
 <body>
-
-		<header class="container-fluid header bottom-shadow">
+	<header class="container-fluid header bottom-shadow fixed-header">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -20,22 +67,13 @@
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<div class="top-menu text-right">
-							<span class="hidden-sm hidden-xs hidden-md hidden-lg">
-								<button class="btn btn-default top-upload-btn" data-toggle="modal" data-target="#myModal">
-									<i class="fa fa-upload"></i> Upload Material
-								</button>
+							
+							<span  class="search-icon visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
+								<a href="" class="serach-a"><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
 							</span>
 
-							<span  class="search-icon visible-sm-inline visible-xs-inline" data-toggle="tooltip" title="Search" data-placement="bottom">
-								<a href=""><i class="fa fa-search text-thin" aria-hidden="true"></i></a>
-							</span>
-
-							<span id="search" class="search-icon hidden-sm hidden-xs" data-toggle="tooltip" title="Search" data-placement="bottom">
-								<i class="fa fa-search text-thin" aria-hidden="true"></i>
-							</span>
-
-							<span id="top-search-input-group" class="input-text-group top-search-input-group hide-search">
-								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search for Materials">
+							<span class="visible-sm-inline visible-md-inline hidden-xs top-search-input-group">
+								<input type="text" id="top-search-input-text" class="input-text text-thin top-search-input-text" placeholder="Search...">
 							</span>
 
 							<span class="note-icon dropdown"> 
@@ -95,9 +133,9 @@
 							  	</a>
 								<ul class="dropdown-menu dropdown-menu-left dropdown-ul">
 									<div class="poppver-arrow"></div>
-								    <li class="dropdown-li"><a  class="dropdown-a text-thin" href="#">Profile</a></li>
-								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Your courses</a></li>
-								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Settings</a></li>
+								  	<li class="dropdown-li"><a  class="dropdown-a text-thin" href="/profile.html">Profile</a></li>
+							    	<li class="dropdown-li"><a class="dropdown-a text-thin" href="/course.html">Your courses</a></li>
+							    	<li class="dropdown-li"><a class="dropdown-a text-thin" href="/Settings.html">Settings</a></li>
 								    <li role="separator" class="divider"></li>
 								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Help</a></li>
 								    <li class="dropdown-li"><a class="dropdown-a text-thin" href="#">Sign Out</a></li>
@@ -108,58 +146,42 @@
 				</div>
 			</div>
 	</header>
-	<section class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="write-note-box">
-					<div>
-						<h3 class="text-thin text-center">Write Note</h3>
-					</div>
-					<form>
-						<div class="input-text-group">
-							<input type="text" class="input-text small request-input upload-input-lg" placeholder="Note Title">
-						</div>
-						<div class="input-text-group">
-							<span>
-								<input type="text" class="input-text small request-input request-input-sm" placeholder="Course code">
-							</span>
-							<span class="upload-select-type text-right">
-								<select class="input-text text-muted request-input request-input-sm">
-									<option class="small text-muted">Type</option>
-									<option class="small">Handout</option>
-									<option class="small">Note</option>
-									<option class="small">Assignment</option>
-								</select>
-							</span>
-						</div>
-						<div>
-							<div id="trumbowyg-demo"></div>
-						</div>
-					</form>
+	<section class="container-fluid section-2 editor-section">
+		<section class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="editor-form-wrapper">
+						<form>
+							<div class="btn-wrapper">
+								<ul>
+									<li class="btn-list"><button class="btn-draft">Draft</button></li>
+									<li class="btn-list"><button class="btn-publish">Publish</button></li>
+								</ul>
+							</div>
+							<div class="editor-title-wrapper">
+								<input type="text" name="" placeholder="Title">
+							</div>
+							<div class="editor-body-wrapper">
+								<div class="editor">
+									
+								</div>
+							</div>
+						</form>
+					</div>			
 				</div>
 			</div>
-		</div>
+		</section>
 	</section>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script src="js/trumbowyg.min.js"></script>
-	<script>
-		window.jQuery || document.write('<script src="js/vendor/jquery-3.1.0.min.js"><\/script>')
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-				$('[data-toggle="tooltip"]').tooltip();
-
-				$("#search").click(function(){
-					$("#top-search-input-group").toggleClass("hide-search");
-				});
-
-				$("#top-search-input-text").blur(function(){
-					$("#top-search-input-group").toggleClass("hide-search");
-				});
-				$.trumbowyg.svgPath = 'css/icons.svg';
-				$('#trumbowyg-demo').trumbowyg();
-		});
-	</script>
 </body>
+<script type="text/javascript">
+	var elements = document.querySelectorAll('.editor');
+    var editor = new MediumEditor(elements, {
+    	placeholder: {
+    		text: 'Write note...'
+    	},
+    	autoLink: true
+    });
+
+
+</script>
 </html>

@@ -3,233 +3,323 @@
 <head>
 	<title>CM Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"> 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<<<<<<< HEAD
-	<link rel="stylesheet" type="text/css" href="css/material.min.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/new-style.css">
 </head>
-<style type="text/css">
-	@media only screen and (min-width: 769px){
-		#login-form-con{
-			display: none;
-		}
-
-	}
-	@media only screen and (min-width: 1200px){
-		.login-links-forget-psw{
-			margin-right: 63%;
-		}
-	} 
-	.form-container{
-		width: 512px;
-	}
-	.login-links{
-		margin-top: 5px;
-		margin-bottom: 5px;
-		color: #3f51b5;
-	}
-</style>
 <body>
-	<!--PC header-->
 	<header class="container-fluid header">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-2 col-md-4 col-lg-6">
-					<h3 class="logo text-thin">Logo</h3>
+				<div class="col-xs-6 col-sm-2 col-md-4 col-lg-6">
+					<h3 class="logo">LetStudy</h3>
 				</div>
-				<div  class="col-sm-10 col-md-8 col-lg-6 text-right top-login-form">
-					<form id="pc" class="">
-						<span class="input-text-group">
-							<input type="text" class="input-text text-thin" placeholder="Matric No">
-						</span>
-						<span class="input-text-group">
-							<input type="password" class="input-text text-thin" placeholder="Password">
-						</span>
-						<button class="btn button text-thin">Login</button>
-						<p><a href="" class="login-links-forget-psw text-thin">Forgot Password?</a></p>
-					</form>		
+				<div  class="col-xs-6 col-sm-10 col-md-8 col-lg-6 text-right top-login-form">	
+					<div class="mobile-signup-btn">
+						<a href="" class="signup-btn" data-toggle="modal" data-target=".signup-modal">Sign up</a>
+					</div>	
 				</div>
 			</div>
 		</div>
 	</header>
-	<!--/pc-header-->
-
-	<section id="section-container" class="container-fluid">
-		<div class="container">
-			<div class="row">
-				<!--Site description-->
-				<div class="col-xs-12 col-sm-6 col-md-8 text-center site-desc">
-					<h4 class="text-uppercase site-desc-title text-thin smallScreen-desc-title text-large">Sharing Just Got Easy</h4>
-					<p class="site-subtitle">share lecture materials with your course mates anytime and anywhere</p>
+	<section class="container section-1">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-6 col-md-offset-6 col-sm-offset-2">
+				<div class="title-wrapper">
+					<h1>Download class materials, share knowledge and meet course mates</h1> 
 				</div>
-				<!--/Site description-->
-
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<!--Mobile Login-->
-					<div id="mobile" class="form-container mdl-card">
-						
-							<h3 class="form-title text-uppercase text-center">Login</h3>
-						
-						<form class="form">
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin " placeholder="Matric No">
-							</span>
-							<span class="input-text-group">
-								<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
-							</span>
-							<p class="small text-center login-links">
-								<a href="" class="text-thin">Forgot Password?</a>
-							</p>
-							<p class="small text-center text-thin ">
-								Don't have an account? <a href="" class="text-thin text-primary login-links">Create Account</a>
-							</p>
-							
-							<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored text-thin smallScreen-login-button center-block">Login</button>
-						</form>
-					</div>
-					<!--/Mobile Login-->
-=======
-    <title>CM Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet" />
-=======
-	<link rel="stylesheet" type="text/css" href="css/style.css">
->>>>>>> 1719a1fb7804d108cce3efceb4185b9236fe8807
-</head>
-<style type="text/css">
-	@media only screen and (min-width: 769px){
-		#login-form-con{
-			display: none;
-		}
-	}
-	@media only screen and (min-width: 1200px){
-		.login-links-forget-psw{
-			margin-right: 63%;
-		}
-	}
-
-</style>
-<body>
-	<!--PC header-->
-	<header class="container-fluid header">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-2 col-md-4 col-lg-6">
-					<h1 class="logo text-thin">Logo</h1>
-				</div>
-				<div  class="col-sm-10 col-md-8 col-lg-6 text-right top-login-form">
-					<form id="pc" class="">
-						<span class="input-text-group">
-							<input type="text" class="input-text text-thin" placeholder="Matric No">
-						</span>
-						<span class="input-text-group">
-							<input type="password" class="input-text text-thin" placeholder="Password">
-						</span>
-						<button class="btn button text-thin">Login</button>
-						<p><a href="" class="login-links-forget-psw text-thin">Forgot Password?</a></p>
-					</form>		
+				<div class="signinForm-wrapper">
+					<p>Registered? Sign in now<span> (No password needed, Seriously!)!</span></p>
+					<form>
+						<div class="form-input signin-form-input">
+							<input type="text" name="matricNum" placeholder="Matric Number">
+							<button class="signin-btn">Sign in</button>
+						</div>
+					</form>
 				</div>
 			</div>
-		</div>
-	</header>
-	<!--/pc-header-->
-
-	<section id="section-container" class="container-fluid">
-		<div class="container">
-			<div class="row">
-				<!--Site description-->
-				<div class="col-xs-12 col-sm-6 col-md-8 text-center site-desc">
-					<h1 class="text-uppercase site-desc-title text-thin smallScreen-desc-title text-large">Sharing Just Got Easy</h1>
-					<p class="site-subtitle">share lecture materials with your course mates anytime and anywhere</p>
-				</div>
-				<!--/Site description-->
-
-<<<<<<< HEAD
-
-    <section>
-        <main class="container">
-            <div class="">
-                <h3></h3>
-            </div>
-        </main>
-    </section>
-=======
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<!--Mobile Login-->
-					<div id="mobile" class="form-container">
-						<h3 class="form-title text-uppercase text-center">Login</h3>
-						<hr>
-						<form class="form">
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Matric No">
-							</span>
-							<span class="input-text-group">
-								<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
-							</span>
-							<p class="small text-center login-links">
-								<a href="" class="text-thin">Forgot Password?</a>
-							</p>
-							<p class="small text-center text-thin">
-								Don't have an account? <a href="" class="login-links text-thin text-primary">Create Account</a>
-							</p>
-							<br>
-							<button class="btn button text-thin smallScreen-login-button">Login</button>
-						</form>
-					</div>
-					<!--/Mobile Login-->
->>>>>>> 1719a1fb7804d108cce3efceb4185b9236fe8807
-
-
-					<!--Sign up-->
-					<div id="pc" class="form-container largeScreen">
-						<h3 class="form-title text-uppercase text-center">Sign up</h3>
-						<hr>
-						<form class="form">
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin invalid-form-border" placeholder="Matric No">
-							</span>
-							<span class="">
-								<p class="error-mesg text-danger text-xs text-2-thin">Matric number already exist</p>
-							</span>
-							<span class="input-text-group">
-								<input type="password" class="large-input-text input-text text-thin" placeholder="Password">
-							</span>
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Name">
-							</span>
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Email">
-							</span>
-							<span class="input-text-group">
-								<input type="text" class="large-input-text input-text text-thin" placeholder="Phone no">
-							</span>
-							<span class="input-text-group">
-								<select class="large-input-text input-text text-thin text-muted">
-								<option>Select School</option>
-								<option>FUTA</option>
-							</select>
-							</span>
-							<button class="btn button button-center text-thin smallScreen-signupBottom-button signup-button">Signup</button>
-						</form>
-					</div>
-					<!--/signup-->
-
+			<div class="col-md-6">
+				<div class="pc-title-wrapper">
+					<h1>Download class materials, share knowledge and meet course mates.</h1>
+					<div class="howit-works">
+						<p>How it works</p>
+						<ul>
+							<li>Register the courses you're offering & download class materials.</li>
+							<li>Upload class materials for others to download.</li>
+							<li>Write note on topics you understand and want to share.</li>
+						</ul>
+					</div> 
 				</div>
 			</div>
 		</div>
 	</section>
-	<footer class="container-fluid footer">
-		<div class="container">
+	<section class="container-fluid section-2">
+		<section class="container">
 			<div class="row">
-				<div class="col-md-12 text-center footer-links">
-					<a href="" class="footer-links text-thin">Privacy</a> | <a href="" class="footer-links text-thin">Terms and Conditions</a> | <a href="" class="footer-links text-thin">About us</a> | <a href="" class="footer-links text-thin">Jobs</a> | <a href="" class="footer-links text-thin">Get in touch</a>
-					<p class="copy-right text-thin">2016 All Right Reserved</p>
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="stat-wrapper">
+						<p>Don't miss out!</p>
+						<ul class="stat-ul">
+							<li>
+								<i class="fa fa-users fa-lg" aria-hidden="true"></i>
+								<p>20k+</p>
+							</li>
+							<li>
+								<i class="fa fa-file-pdf-o fa-lg" aria-hidden="true"></i>
+								<p>100k+</p>
+							</li>
+							<li>
+								<i class="fa fa-sticky-note-o fa-lg" aria-hidden="true"></i>
+								<p>300k+</p>
+							</li>
+						</ul>
+					</div>
+					<hr/>
+				</div>
+				<div class="col-xs-12">
+					<div class="recent-post-wrapper">
+						<h1>RECENT ACTIVITIES</h1>
+						<div class="post-card">
+							<div class="post-content">
+								<div class="postPreview-header">
+									<div class="left-controls controlSections">
+										<a href="/@flickz" class="userPic">
+											<img src="img/avatar1.png" />
+										</a>
+										<div class="userInfo">
+											<p class="name">
+												<a href="/@flickz">Oluwaseun Ojo</a>
+											</p>
+											<p class="info">
+												<a href="/post">1h</a>
+												<span class="middot"> . </span>
+												<a href="/post">asked a question</a>
+
+											</p>
+										</div>
+									</div>
+									<div class="right-control">
+										<div class="tagsWrap">
+											<button class="tagsAct">Bdg202 +2</button>
+										</div>
+										<div class="optionsWrap">
+											<button class="optionsAct">
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="post-title-data">
+									<h2>
+										<a href="/hfaosfhoafhoafas">How to build a microservice in Nodejs web app?</a>
+									</h2>
+								</div>
+								<div class="post-meta-desc">
+									<div class="post-in-brief">
+										<p>
+											Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+										</p>
+									</div>
+								</div>
+								<div class="card-footer">
+									<div class="footer-content">
+										<div class="left-section">
+											<button class="footerAct upvote">
+												<i class="fa fa-thumbs-o-up"></i>
+											</button>
+											<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+										</div>
+										<div class="rightActWrap">
+											<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+												<i class="fa fa-share-alt" aria-hidden="true"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="post-card">
+							<div class="post-content">
+								<div class="postPreview-header">
+									<div class="left-controls controlSections">
+										<a href="/@flickz" class="userPic">
+											<img src="img/avatar1.png" />
+										</a>
+										<div class="userInfo">
+											<p class="name">
+												<a href="/@flickz">Oyerinde Temtayo</a>
+											</p>
+											<p class="info">
+												<a href="/post">1h</a>
+												<span class="middot"> . </span>
+												<a href="/post">shared a material</a>
+
+											</p>
+										</div>
+									</div>
+									<div class="right-control">
+										<div class="tagsWrap">
+											<button class="tagsAct">Cve394 +2</button>
+										</div>
+										<div class="optionsWrap">
+											<button class="optionsAct">
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="post-title-data">
+									<h2>
+										<a href="/hfaosfhoafhoafas">Moment Distribution Method</a>
+									</h2>
+								</div>
+								<div class="post-meta-desc">
+									<div class="post-in-brief">
+										<p>
+											Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+										</p>
+									</div>
+								</div>
+								<div class="card-footer">
+									<div class="footer-content">
+										<div class="left-section">
+											<button class="footerAct upvote">
+												<i class="fa fa-thumbs-o-up"></i>
+											</button>
+											<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+										</div>
+										<div class="rightActWrap">
+											<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+												<i class="fa fa-share-alt" aria-hidden="true"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="post-card">
+							<div class="post-content">
+								<div class="postPreview-header">
+									<div class="left-controls controlSections">
+										<a href="/@flickz" class="userPic">
+											<img src="img/avatar1.png" />
+										</a>
+										<div class="userInfo">
+											<p class="name">
+												<a href="/@flickz">Kayode Ojo</a>
+											</p>
+											<p class="info">
+												<a href="/post">14h</a>
+												<span class="middot"> . </span>
+												<a href="/post">wrote a note</a>
+
+											</p>
+										</div>
+									</div>
+									<div class="right-control">
+										<div class="tagsWrap">
+											<button class="tagsAct">Bdg404 +2</button>
+										</div>
+										<div class="optionsWrap">
+											<button class="optionsAct">
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="post-title-data">
+									<h2>
+										<a href="/hfaosfhoafhoafas">How to solve the problem of structural analysis</a>
+									</h2>
+								</div>
+								<div class="post-meta-desc">
+									<div class="post-in-brief">
+										<p>
+											Hello All, I want to learn about microservices (NodeJS+Mongodb) and want to build a blog app with Docker. But I don't  know how to start with that. Requirements: 1- Any user can login and create blogs. 2.Login users can comment on blogs. So I re...
+										</p>
+									</div>
+								</div>
+								<div class="card-footer">
+									<div class="footer-content">
+										<div class="left-section">
+											<button class="footerAct upvote">
+												<i class="fa fa-thumbs-o-up"></i>
+											</button>
+											<a href="/comment" class="footerAct comment">Comment <span class="commentCount"> (1)</span></a>
+										</div>
+										<div class="rightActWrap">
+											<button class="actBtn shareBtn" data-toggle="modal" data-target=".share-modal">
+												<i class="fa fa-share-alt" aria-hidden="true"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</section>
+	</section>
+	
+
+
+
+
+
+
+	<div class="modal share-modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content share-modal-content">
+	      <div class="modal-header share-modal-header">
+	      	<p class="modal-title">Share this post</p>
+	      	<p class="post-title">How to build microservices for simple blog app?</p>
+	      </div>
+	      <div class="modal-body share-modal-soical-btn">
+	      	<a href="#" class="fa fa-facebook social-btn"></a>
+			<a href="#" class="fa fa-twitter social-btn"></a>
+			<a href="#" class="fa fa-whatsapp social-btn"></a>
+			<a href="#" class="fa fa-linkedin social-btn"></a>
+			<div class="form-input post-link">
+				<button class="signin-btn copy-btn">Copy URL <i class="fa fa-copy"></i></button>
+				<input type="text" value="https://mater.de/sfd" readonly>		
+			</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade bs-example-modal-sm signup-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content signup-modal-content">
+	      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      <div class="modal-header signup-modal-header">
+	      	<p>Sign up</p>
+	      </div>
+	      <div class="modal-body">
+	      	<form>
+	      		<div class="form-input signup-form-input">
+					<input type="text" name="matricNum" placeholder="Matric Number">
+				</div>
+				<div class="form-input signup-form-input">
+					<input type="text" name="matricNum" placeholder="Name">
+				</div>
+				<div class="form-input signup-form-input">
+					<input type="text" name="matricNum" placeholder="Email / Phone Number">
+				</div>
+				<button class="signin-btn modal-signup-btn">Sign up</button>
+	      	</form>
+	      </div>
+	      <div class="modal-footer">
+	      	<p>By joining you agree to our <a href="/terms" target="_blank">terms</a> and <a href="/privacy" target="_Blank">privacy policies</a></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 </body>
 </html>
